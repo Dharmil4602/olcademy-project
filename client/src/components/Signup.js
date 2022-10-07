@@ -1,5 +1,6 @@
 import React from "react";
 import "./Signup.css";
+import { NavLink } from "react-router-dom";
 
 function Signup() {
   return (
@@ -144,6 +145,12 @@ function Signup() {
                         value="Register"
                       />
                     </div>
+                    <p className="small fw-bold mt-2 pt-1 mb-0">
+                      Already have an account?{" "}
+                      <NavLink to="/login" className="link-danger">
+                        Login
+                      </NavLink>
+                    </p>
                   </form>
                 </div>
               </div>
