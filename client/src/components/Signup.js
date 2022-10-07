@@ -141,7 +141,7 @@ function Signup() {
                       <input
                         className="btn btn-primary btn-lg"
                         type="submit"
-                        value="Submit"
+                        value="Register"
                       />
                     </div>
                   </form>
