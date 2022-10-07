@@ -1,5 +1,5 @@
-import React from 'react'
-import './Signup.css';
+import React from "react";
+import "./Signup.css";
 
 function Signup() {
   return (
@@ -10,10 +10,12 @@ function Signup() {
             <div className="col-12 col-lg-9 col-xl-7">
               <div
                 className="card shadow-2-strong card-registration"
-                style={{borderRadius: "15px"}}
+                style={{ borderRadius: "15px" }}
               >
                 <div className="card-body p-4 p-md-5">
-                  <h3 className="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                  <h3 className="mb-4 pb-2 pb-md-0 mb-md-5">
+                    Registration Form
+                  </h3>
                   <form>
                     <div className="row">
                       <div className="col-md-6 mb-4">
@@ -66,7 +68,10 @@ function Signup() {
                             id="femaleGender"
                             value="option1"
                           />
-                          <label className="form-check-label" htmlFor="femaleGender">
+                          <label
+                            className="form-check-label"
+                            htmlFor="femaleGender"
+                          >
                             Female
                           </label>
                         </div>
@@ -79,7 +84,10 @@ function Signup() {
                             id="maleGender"
                             value="option2"
                           />
-                          <label className="form-check-label" htmlFor="maleGender">
+                          <label
+                            className="form-check-label"
+                            htmlFor="maleGender"
+                          >
                             Male
                           </label>
                         </div>
@@ -92,7 +100,10 @@ function Signup() {
                             id="otherGender"
                             value="option3"
                           />
-                          <label className="form-check-label" htmlFor="otherGender">
+                          <label
+                            className="form-check-label"
+                            htmlFor="otherGender"
+                          >
                             Other
                           </label>
                         </div>
@@ -144,4 +155,4 @@ function Signup() {
   );
 }
 
-export default Signup
+export default Signup;
