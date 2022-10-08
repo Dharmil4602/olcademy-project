@@ -65,6 +65,7 @@ function Signup() {
                             name="name"
                             value={user.name}
                             onChange={handleInputChange}
+                            required
                           />
                           <label className="form-label" htmlFor="firstName">
                             Name
@@ -84,6 +85,7 @@ function Signup() {
                             name="birthday"
                             value={user.birthday}
                             onChange={handleInputChange}
+                            required
                           />
                           <label htmlFor="birthdayDate" className="form-label">
                             Birthday
@@ -101,6 +103,7 @@ function Signup() {
                             id="femaleGender"
                             value={user.gender}
                             onChange={handleInputChange}
+                            required
                           />
                           <label
                             className="form-check-label"
@@ -118,6 +121,7 @@ function Signup() {
                             id="maleGender"
                             value={user.gender}
                             onChange={handleInputChange}
+                            required
                           />
                           <label
                             className="form-check-label"
@@ -135,6 +139,7 @@ function Signup() {
                             id="otherGender"
                             value={user.gender}
                             onChange={handleInputChange}
+                            required
                           />
                           <label
                             className="form-check-label"
@@ -157,6 +162,7 @@ function Signup() {
                             placeholder="Enter Email"
                             value={user.email}
                             onChange={handleInputChange}
+                            required
                           />
                           <label className="form-label" htmlFor="emailAddress">
                             Email
@@ -173,6 +179,7 @@ function Signup() {
                             placeholder="Password"
                             value={user.password}
                             onChange={handleInputChange}
+                            required
                           />
                           <label className="form-label" htmlFor="phoneNumber">
                             Password

@@ -34,7 +34,10 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item active font-weight-bold">
-              <NavLink className="nav-link" to="signup">
+              <NavLink
+                className="nav-link"
+                to="signup"
+              >
                 Signup
               </NavLink>
             </li>
