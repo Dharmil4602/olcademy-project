@@ -1,44 +1,47 @@
 import React, { useState } from "react";
 import "./Signup.css";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { db } from "../firebase";
 
 function Signup() {
 
-  const [user,setUser] = useState({
-    name:"",
-    email:"",
-    gender:"",
-    birthday:"",
-    password:""
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    gender: "",
+    birthday: "",
+    password: ""
   })
 
-  let name,value;
+  const naviagte = useNavigate();
+  let name, value;
   const handleInputChange = (e) => {
     console.log(e);
     name = e.target.name;
     value = e.target.value;
 
-    setUser({...user,[name]:value});
+    setUser({ ...user, [name]: value });
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     db.collection("users").add({
-      name:user.name,
-      email:user.email,
-      gender:user.gender,
-      birthday:user.birthday,
-      password:user.password
+      name: user.name,
+      email: user.email,
+      gender: user.gender,
+      birthday: user.birthday,
+      password: user.password
     })
-    .then(() => {
-      alert("User added successfully");
-      setUser({name:"",email:"",  gender:"",birthday:"",password:""})
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
+      .then(() => {
+        alert("User added successfully");
+        setUser({ name: "", email: "", gender: "", birthday: "", password: "" });
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+      naviagte("/home");
   }
+
   return (
     <>
       <section className="gradient-custom">
