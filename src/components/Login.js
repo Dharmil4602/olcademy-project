@@ -71,7 +71,7 @@ function Login() {
                   </button>
                   <p className="small fw-bold mt-2 pt-1 mb-0">
                     Don't have an account?{" "}
-                    <NavLink to="/signup" className="link-danger">
+                    <NavLink to="/" className="link-danger">
                       Register
                     </NavLink>
                   </p>
