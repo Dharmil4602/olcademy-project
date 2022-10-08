@@ -147,7 +147,7 @@ function Signup() {
                     </div>
 
                     <div className="row">
-                      <div className="col-md-6 mb-4 pb-2">
+                      <div className="col-md-6 mb-2 pb-2">
                         <div className="form-outline">
                           <input
                             type="email"
@@ -163,7 +163,7 @@ function Signup() {
                           </label>
                         </div>
                       </div>
-                      <div className="col-md-6 mb-4 pb-2">
+                      <div className="col-md-6 mb-2 pb-2">
                         <div className="form-outline">
                           <input
                             type="password"
