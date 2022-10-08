@@ -99,7 +99,7 @@ function Signup() {
                           <input
                             className="form-check-input"
                             type="radio"
-                            name="inlineRadioOptions"
+                            name="femaleGender"
                             id="femaleGender"
                             value={user.gender}
                             onChange={handleInputChange}
@@ -117,7 +117,7 @@ function Signup() {
                           <input
                             className="form-check-input"
                             type="radio"
-                            name="inlineRadioOptions"
+                            name="maleGender"
                             id="maleGender"
                             value={user.gender}
                             onChange={handleInputChange}
@@ -135,7 +135,7 @@ function Signup() {
                           <input
                             className="form-check-input"
                             type="radio"
-                            name="inlineRadioOptions"
+                            name="otherGender"
                             id="otherGender"
                             value={user.gender}
                             onChange={handleInputChange}
