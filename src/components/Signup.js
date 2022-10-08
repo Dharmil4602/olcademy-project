@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Signup.css";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
 
 function Signup() {
@@ -195,12 +195,6 @@ function Signup() {
                         value="Register"
                       />
                     </div>
-                    <p className="small fw-bold mt-2 pt-1 mb-0">
-                      Already have an account?{" "}
-                      <NavLink to="/login" className="link-danger">
-                        Login
-                      </NavLink>
-                    </p>
                   </form>
                 </div>
               </div>
