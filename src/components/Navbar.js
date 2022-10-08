@@ -41,6 +41,14 @@ function Navbar() {
                 Signup
               </NavLink>
             </li>
+            <li className="nav-item active font-weight-bold">
+              <NavLink
+                className="nav-link"
+                to="/contact"
+              >
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>
