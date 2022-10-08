@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { NavLink } from "react-router-dom";
+import { db } from "../firebase";
 
 function Signup() {
 
   const [user,setUser] = useState({
     name:"",
     email:"",
-    phone:"",
     gender:"",
     birthday:"",
     password:""
@@ -20,6 +20,24 @@ function Signup() {
     value = e.target.value;
 
     setUser({...user,[name]:value});
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    db.collection("users").add({
+      name:user.name,
+      email:user.email,
+      gender:user.gender,
+      birthday:user.birthday,
+      password:user.password
+    })
+    .then(() => {
+      alert("User added successfully");
+      setUser({name:"",email:"",  gender:"",birthday:"",password:""})
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
   }
   return (
     <>
@@ -35,7 +53,7 @@ function Signup() {
                   <h3 className="mb-4 pb-2 pb-md-0 mb-md-5">
                     Registration Form
                   </h3>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="row">
                       <div className="col-md-6 mb-4">
                         <div className="form-outline">
