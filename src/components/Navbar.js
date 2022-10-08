@@ -7,7 +7,7 @@ function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-primary px-3">
         <NavLink className="navbar-brand font-bold" to="/">
-          Olacademy
+          Olcademy
         </NavLink>
         <button
           className="navbar-toggler"
