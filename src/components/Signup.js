@@ -103,7 +103,6 @@ function Signup() {
                             id="femaleGender"
                             value={user.gender}
                             onChange={handleInputChange}
-                            required
                           />
                           <label
                             className="form-check-label"
@@ -121,7 +120,6 @@ function Signup() {
                             id="maleGender"
                             value={user.gender}
                             onChange={handleInputChange}
-                            required
                           />
                           <label
                             className="form-check-label"
@@ -139,7 +137,6 @@ function Signup() {
                             id="otherGender"
                             value={user.gender}
                             onChange={handleInputChange}
-                            required
                           />
                           <label
                             className="form-check-label"
