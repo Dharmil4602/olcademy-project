@@ -5,14 +5,22 @@ import { NavLink } from "react-router-dom";
 function Signup() {
 
   const [user,setUser] = useState({
-    first_name:"",
-    last_name:"",
+    name:"",
     email:"",
     phone:"",
     gender:"",
     birthday:"",
     password:""
   })
+
+  let name,value;
+  const handleInputChange = (e) => {
+    console.log(e);
+    name = e.target.name;
+    value = e.target.value;
+
+    setUser({...user,[name]:value});
+  }
   return (
     <>
       <section className="gradient-custom">
@@ -36,22 +44,12 @@ function Signup() {
                             id="firstName"
                             className="form-control form-control-lg"
                             placeholder="First Name"
+                            name="name"
+                            value={user.name}
+                            onChange={handleInputChange}
                           />
                           <label className="form-label" htmlFor="firstName">
-                            First Name
-                          </label>
-                        </div>
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <div className="form-outline">
-                          <input
-                            type="text"
-                            id="lastName"
-                            className="form-control form-control-lg"
-                            placeholder="Last Name"
-                          />
-                          <label className="form-label" htmlFor="lastName">
-                            Last Name
+                            Name
                           </label>
                         </div>
                       </div>
@@ -61,10 +59,13 @@ function Signup() {
                       <div className="col-md-6 mb-4 d-flex align-items-center">
                         <div className="form-outline datepicker w-100">
                           <input
-                            type="text"
+                            type="date"
                             className="form-control form-control-lg"
                             id="birthdayDate"
                             placeholder="DD/MM/YYYY"
+                            name="birthday"
+                            value={user.birthday}
+                            onChange={handleInputChange}
                           />
                           <label htmlFor="birthdayDate" className="form-label">
                             Birthday
@@ -80,7 +81,8 @@ function Signup() {
                             type="radio"
                             name="inlineRadioOptions"
                             id="femaleGender"
-                            value="option1"
+                            value={user.gender}
+                            onChange={handleInputChange}
                           />
                           <label
                             className="form-check-label"
@@ -96,7 +98,8 @@ function Signup() {
                             type="radio"
                             name="inlineRadioOptions"
                             id="maleGender"
-                            value="option2"
+                            value={user.gender}
+                            onChange={handleInputChange}
                           />
                           <label
                             className="form-check-label"
@@ -112,7 +115,8 @@ function Signup() {
                             type="radio"
                             name="inlineRadioOptions"
                             id="otherGender"
-                            value="option3"
+                            value={user.gender}
+                            onChange={handleInputChange}
                           />
                           <label
                             className="form-check-label"
@@ -130,8 +134,11 @@ function Signup() {
                           <input
                             type="email"
                             id="emailAddress"
+                            name="email"
                             className="form-control form-control-lg"
                             placeholder="Enter Email"
+                            value={user.email}
+                            onChange={handleInputChange}
                           />
                           <label className="form-label" htmlFor="emailAddress">
                             Email
@@ -141,10 +148,13 @@ function Signup() {
                       <div className="col-md-6 mb-4 pb-2">
                         <div className="form-outline">
                           <input
-                            type="tel"
+                            type="password"
                             id="phoneNumber"
+                            name="password"
                             className="form-control form-control-lg"
                             placeholder="Password"
+                            value={user.password}
+                            onChange={handleInputChange}
                           />
                           <label className="form-label" htmlFor="phoneNumber">
                             Password
