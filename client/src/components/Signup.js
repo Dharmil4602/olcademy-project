@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Signup.css";
 import { NavLink } from "react-router-dom";
 
 function Signup() {
+
+  const [user,setUser] = useState({
+    first_name:"",
+    last_name:"",
+    email:"",
+    phone:"",
+    gender:"",
+    birthday:"",
+    password:""
+  })
   return (
     <>
       <section className="gradient-custom">
@@ -25,6 +35,7 @@ function Signup() {
                             type="text"
                             id="firstName"
                             className="form-control form-control-lg"
+                            placeholder="First Name"
                           />
                           <label className="form-label" htmlFor="firstName">
                             First Name
@@ -37,6 +48,7 @@ function Signup() {
                             type="text"
                             id="lastName"
                             className="form-control form-control-lg"
+                            placeholder="Last Name"
                           />
                           <label className="form-label" htmlFor="lastName">
                             Last Name
@@ -52,6 +64,7 @@ function Signup() {
                             type="text"
                             className="form-control form-control-lg"
                             id="birthdayDate"
+                            placeholder="DD/MM/YYYY"
                           />
                           <label htmlFor="birthdayDate" className="form-label">
                             Birthday
@@ -118,6 +131,7 @@ function Signup() {
                             type="email"
                             id="emailAddress"
                             className="form-control form-control-lg"
+                            placeholder="Enter Email"
                           />
                           <label className="form-label" htmlFor="emailAddress">
                             Email
@@ -130,6 +144,7 @@ function Signup() {
                             type="tel"
                             id="phoneNumber"
                             className="form-control form-control-lg"
+                            placeholder="Password"
                           />
                           <label className="form-label" htmlFor="phoneNumber">
                             Password
