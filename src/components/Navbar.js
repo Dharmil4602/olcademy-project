@@ -6,8 +6,8 @@ function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-primary px-3">
-        <NavLink className="navbar-brand" to="/">
-          Navbar
+        <NavLink className="navbar-brand font-bold" to="/">
+          Olacademy
         </NavLink>
         <button
           className="navbar-toggler"
